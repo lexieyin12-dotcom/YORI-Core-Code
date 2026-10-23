@@ -193,7 +193,7 @@ In the original UI, a stable window supplies Cat-Cow EMG baseline medians, trigg
 The user selects the pose in the original App. This core evaluates that selected Mountain or Cat-Cow pose; it is not a general classifier that automatically identifies arbitrary exercises.
 
 - **Mountain:** `evaluateMountain()` derives upper/lower spine pitch and roll differences. Ordered prototype pitch rules produce posterior pelvic tilt, anterior pelvic tilt, rounded upper back, or correct. Optional foot pressure supplies symmetry.
-- **Cat-Cow:** `ingestCatCowFrame()` / `evaluateCatCowWindow()` use approximately 16 seconds of paired MAIN/gyro data. Upper/whole-spine range and combined gyro RMS determine incomplete range and/or poor control. Both issues may coexist. Optional hand pressure supplies symmetry. Relative EMG activation is reported as a baseline-relative percentage change, not a clinical measure or a score input.
+- **Cat-Cow:** `ingestCatCowFrame()` / `evaluateCatCowWindow()` use approximately 16 seconds of paired MAIN/gyro data. Upper/whole-spine range and combined gyro RMS determine incomplete range and/or poor control. Both issues may coexist. Optional hand pressure supplies symmetry. EMG changes are summarized relative to a stable-window baseline as supplementary Cat-Cow metrics. These relative changes are not clinical muscle-activation measurements.
 - **Pressure:** `pressureDistribution()` calculates left/right load percentages and `100 - abs(leftPercent - rightPercent)` symmetry from the supplied readings. No physical force conversion is implemented in this path.
 
 ### Session scoring
@@ -204,7 +204,7 @@ The user selects the pose in the original App. This core evaluates that selected
 - Cat-Cow raw Alignment uses range completion and incomplete-range frequency. Raw Stability uses consistency of ranges and gyro RMS. Raw Control uses mean gyro RMS quality, the 90th percentile of window gyro peaks, and poor-control frequency.
 - Valid pose-specific Mat symmetry contributes 15% of raw Stability when available; otherwise Flex-only stability is used.
 - `YORIScoreCalibrator` maps raw dimensions using fixed prototype interpolation anchors. For bounded raw inputs of 0...100, Alignment maps to 55...97 and Stability/Control to 65...97. Overall is the mean of the three calibrated dimensions. Displayed scores are not direct raw-accuracy percentages.
-- Deterministic final feedback is selected from raw dimensions and supporting metrics. EMG does not currently contribute to these scores. Raw score fields are Debug-only.
+- Deterministic final feedback is selected from raw dimensions and supporting metrics. The three dimension scores use IMU-derived movement features and optional pressure symmetry; baseline-relative EMG metrics are summarized separately. Raw score fields are Debug-only.
 
 The thresholds and score curves are prototype development choices, not validated pediatric norms or medical criteria. No physical accuracy or clinical claims are established by this source inspection.
 
