@@ -4,6 +4,39 @@ A public selected-code collection for portfolio review of YORI hardware acquisit
 
 Inspection date: October 23, 2026.
 
+## System workflow
+
+The diagram shows how hardware sensing connects to evaluation, training records, and coaching in the full YORI prototype. Blue nodes represent the selected firmware and core logic; dashed nodes represent hardware, services, or App modules outside this code collection.
+
+```mermaid
+flowchart TD
+    Flex["Flex wearable"] --> FlexBLE["Flex BLE parser"]
+    Mat["Smart Mat"] --> MatBLE["Mat BLE parser"]
+    FlexBLE --> Live["Live evaluation manager"]
+    MatBLE --> Live
+    Live --> Evaluate["Local movement evaluation"]
+    Evaluate --> Guidance["On-screen guidance"]
+    Evaluate --> Score["Session scoring and calibration"]
+    Evaluate --> Context["AI context assembly"]
+    Evaluate --> Intervention["Intervention decisions"]
+    Intervention --> Context
+    Score --> Result["Results screen"]
+    Result --> History["SwiftData training summaries"]
+    History --> Progress["Progress screen"]
+    History --> Context
+    Context --> Proxy["AI backend proxy"]
+    Proxy --> Text["Ark text response"]
+    Text --> Chat["Chat interface"]
+    Text --> Voice["Doubao TTS or local speech"]
+
+    classDef core fill:#e3f2fd,stroke:#b7d3e5,color:#07589d;
+    classDef external fill:#f8fbfd,stroke:#aab8c2,stroke-dasharray:5 5,color:#385166;
+    class Live,Evaluate,Score,Intervention core;
+    class Flex,Mat,FlexBLE,MatBLE,Guidance,Result,History,Progress,Context,Proxy,Text,Chat,Voice external;
+```
+
+The selected firmware implements the two devices' acquisition and transmission logic. The UI, BLE parsers, persistence, AI services, and audio orchestration belong to the full App and are not included here. Coaching also uses context-freshness and playback checks in the full implementation.
+
 ## Scope and provenance
 
 This collection contains exactly two primary Arduino sketches and eight Swift core files. All ten source files are byte-for-byte copies of the corresponding files in the original project. Existing filenames, identifiers, comments, thresholds, behavior, and protocol definitions are unchanged. New documentation is in English.
@@ -156,31 +189,7 @@ The two sketches have closing braces at end of file and no trailing newline. Thi
 
 The full project connects the selected core to omitted transport, UI, persistence, and optional AI services:
 
-```text
-Flex IMUs + EMG ADC --> Flex BLE MAIN + gyro -----+
-                                                |
-Mat analog channels --> Mat BLE text ------------+
-                                                v
-                       Original App BLE managers [not included]
-                                                v
-                       YORILiveSensorModels
-                                                v
-                       YORILiveEvaluationManager
-                                                v
-                       YORIPoseEngine
-                         |             |                 |
-                         v             v                 v
-                    Live feedback   Session scoring   Intervention decisions
-                         |             |                 |
-                         v             v                 v
-                    Original UI     Score calibration  Original AI/voice pipeline
-                    [not included]      |              [not included]
-                                        v
-                                   Final result
-                                        |
-                                        v
-                         Original UI / SwiftData storage [not included]
-```
+See the [system workflow](#system-workflow) above for a visual overview of the full prototype and this collection's scope.
 
 ### Preparation and live evaluation
 
