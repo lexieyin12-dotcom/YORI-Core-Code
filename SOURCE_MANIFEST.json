@@ -1,0 +1,111 @@
+{
+  "collection": "YORI Core Code",
+  "inspection_date": "2026-10-23",
+  "intended_repository_visibility": "public",
+  "source_copy_policy": "Byte-for-byte copies; no functional changes, renaming, translation, or protocol changes.",
+  "files": [
+    {
+      "source_path": "Firmware/YORI_Flex/YORI_Flex.ino",
+      "collection_path": "Firmware/YORI_Flex/YORI_Flex.ino",
+      "original_bytes": 22460,
+      "exported_bytes": 22460,
+      "original_sha256": "78ff8ed988ce7c0bd5dfe3938ae0d3d37dd7f8af507be5b3de2803dd7787ad2e",
+      "exported_sha256": "78ff8ed988ce7c0bd5dfe3938ae0d3d37dd7f8af507be5b3de2803dd7787ad2e"
+    },
+    {
+      "source_path": "Firmware/YORI_Smart_Mat/YORI_Smart_Mat.ino",
+      "collection_path": "Firmware/YORI_Smart_Mat/YORI_Smart_Mat.ino",
+      "original_bytes": 1980,
+      "exported_bytes": 1980,
+      "original_sha256": "21c5b891999b89f0edaef74aeb2304512a4463a3eca532b033559ce69fe48f61",
+      "exported_sha256": "21c5b891999b89f0edaef74aeb2304512a4463a3eca532b033559ce69fe48f61"
+    },
+    {
+      "source_path": "YogaApp/YORILiveSensorModels.swift",
+      "collection_path": "YogaApp/YORILiveSensorModels.swift",
+      "original_bytes": 3068,
+      "exported_bytes": 3068,
+      "original_sha256": "9f772852b2587a3d92b5a69b5125c0f130fadd03e2cfda9ed60961afeb9a0b1a",
+      "exported_sha256": "9f772852b2587a3d92b5a69b5125c0f130fadd03e2cfda9ed60961afeb9a0b1a"
+    },
+    {
+      "source_path": "YogaApp/YORILiveEvaluationManager.swift",
+      "collection_path": "YogaApp/YORILiveEvaluationManager.swift",
+      "original_bytes": 18704,
+      "exported_bytes": 18704,
+      "original_sha256": "619df60ff3749c9bbcb29ffdccc7c24a9077c9c111b9b66936ce177a77ce55d5",
+      "exported_sha256": "619df60ff3749c9bbcb29ffdccc7c24a9077c9c111b9b66936ce177a77ce55d5"
+    },
+    {
+      "source_path": "YogaApp/YORIPoseEngine.swift",
+      "collection_path": "YogaApp/YORIPoseEngine.swift",
+      "original_bytes": 14533,
+      "exported_bytes": 14533,
+      "original_sha256": "ecbf3bf102408066457fca87ae94109467fbf03bead33313cabb88d94f0adb4e",
+      "exported_sha256": "ecbf3bf102408066457fca87ae94109467fbf03bead33313cabb88d94f0adb4e"
+    },
+    {
+      "source_path": "YogaApp/YORISessionEvaluator.swift",
+      "collection_path": "YogaApp/YORISessionEvaluator.swift",
+      "original_bytes": 36928,
+      "exported_bytes": 36928,
+      "original_sha256": "6740a6637cca36903d6ce66fda7da3e2f920dd78922fcf70014cc779cc9b33c3",
+      "exported_sha256": "6740a6637cca36903d6ce66fda7da3e2f920dd78922fcf70014cc779cc9b33c3"
+    },
+    {
+      "source_path": "YogaApp/YORIScoreCalibrator.swift",
+      "collection_path": "YogaApp/YORIScoreCalibrator.swift",
+      "original_bytes": 2738,
+      "exported_bytes": 2738,
+      "original_sha256": "723918493b53dde8e4b244edecab9a01b5ee44e592bc1d5ed9953c77557e9fb3",
+      "exported_sha256": "723918493b53dde8e4b244edecab9a01b5ee44e592bc1d5ed9953c77557e9fb3"
+    },
+    {
+      "source_path": "YogaApp/YORIStartingPositionStabilityDetector.swift",
+      "collection_path": "YogaApp/YORIStartingPositionStabilityDetector.swift",
+      "original_bytes": 7241,
+      "exported_bytes": 7241,
+      "original_sha256": "3cb46bb269e54dd3b444f1f06dfb41532a5f40a4622a669bafe0736ba38b0b38",
+      "exported_sha256": "3cb46bb269e54dd3b444f1f06dfb41532a5f40a4622a669bafe0736ba38b0b38"
+    },
+    {
+      "source_path": "YogaApp/YORIActivePracticeFeedbackPresenter.swift",
+      "collection_path": "YogaApp/YORIActivePracticeFeedbackPresenter.swift",
+      "original_bytes": 6314,
+      "exported_bytes": 6314,
+      "original_sha256": "4209bb55044d19ddc62c245589137095a9f56ffbca44bad5485cc4ab7b53dd25",
+      "exported_sha256": "4209bb55044d19ddc62c245589137095a9f56ffbca44bad5485cc4ab7b53dd25"
+    },
+    {
+      "source_path": "YogaApp/YORIInterventionDecisionEngine.swift",
+      "collection_path": "YogaApp/YORIInterventionDecisionEngine.swift",
+      "original_bytes": 20791,
+      "exported_bytes": 20791,
+      "original_sha256": "eb54ee98e9319d0c40cd9da1d93eda4502710f6e2f26bdfb1ae4e21645f2fe72",
+      "exported_sha256": "eb54ee98e9319d0c40cd9da1d93eda4502710f6e2f26bdfb1ae4e21645f2fe72"
+    }
+  ],
+  "protocol_comparison_sources_not_included": [
+    {
+      "source_path": "YogaApp/BLEManager.swift",
+      "sha256": "869f65e9848d26e862c6eece8831c5cc27a110793a6a8b7c319094c57912d8b3"
+    },
+    {
+      "source_path": "YogaApp/YORIFlexBLEManager.swift",
+      "sha256": "e3ba7143a5ad2496a9b6a2500211023b40f12fff0f1b645d4a2c5a8b85ea324f"
+    },
+    {
+      "source_path": "YogaApp/PracticeResultScreens.swift",
+      "sha256": "70cb7eaa258e413c6432d18d7872afad606b79866912d38b47dc627e0f599150"
+    }
+  ],
+  "hash_algorithm": "SHA-256",
+  "path_conventions": {
+    "source_path": "Relative to the original project root",
+    "collection_path": "Relative to the collection root"
+  },
+  "comment_review": {
+    "date": "2026-10-23",
+    "result": "No Chinese text found in selected files; no comment translations performed."
+  }
+}
