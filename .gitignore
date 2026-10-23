@@ -1,0 +1,41 @@
+# Local credentials and account configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.mobileprovision
+
+# Installed dependencies and generated build output
+node_modules/
+libraries/
+build/
+dist/
+DerivedData/
+.build/
+.pio/
+__pycache__/
+*.pyc
+*.o
+*.a
+*.bin
+*.hex
+*.elf
+
+# Recorded data and media are outside this source selection
+*.csv
+*.sqlite*
+*.db
+*.store*
+*.mp3
+*.wav
+
+# Development references excluded from the minimal collection
+Firmware/experiments/
+
+# Local editor and operating-system state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+.vscode/
+.idea/
